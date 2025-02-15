@@ -11,16 +11,18 @@
 
 $mahasiswa = [
     [
-    "nama" => "Faisa Al Farrel",
-    "nim" => "0110224149",
-    "email" => "alfarrel218@gmail.com", 
-    "jurusan" => "Teknik Informatika"
+        "nama" => "Faisa Al Farrel",
+        "nim" => "0110224149",
+        "email" => "alfarrel218@gmail.com", 
+        "jurusan" => "Teknik Informatika",
+        "gambar" => "changli.jpg"
     ],
     [
         "nama" => "Al Farrel",
         "nim" => "0110999999",
         "email" => "alfarrel99@gmail.com", 
-        "jurusan" => "Teknik Informatika"
+        "jurusan" => "Teknik Informatika",
+        "gambar"=> "butterfly.jpg"
     ],
 ];
 ?>
@@ -31,12 +33,19 @@ $mahasiswa = [
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        img {
+            width: 576px;
+            height: 324px;
+        }
+    </style>
 </head>
 <body>
     <h1>Daftar Mahasiswa</h1>
 
     <?php foreach ($mahasiswa as $mhs) : ?>
         <ul>
+            <li><img src="img/<?= $mhs["gambar"]; ?>"></li>
             <li>Nama : <?= $mhs["nama"]; ?></li>
             <li>Nim : <?= $mhs["nim"]; ?></li>
             <li>Jurusan : <?= $mhs["jurusan"]; ?></li>
